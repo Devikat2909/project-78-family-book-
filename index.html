@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+
+        <title>
+          Family Book
+        </title>
+        <script>
+            var images = [
+  "https://abhyuday-tripathi.github.io/The-Family-Book/poster.jpg",
+  "https://abhyuday-tripathi.github.io/The-Family-Book/sister.PNG", 
+  "https://thumbs.dreamstime.com/b/cute-boy-cartoon-illustration-90163697.jpg" , 
+  "https://previews.123rf.com/images/jemastock/jemastock1804/jemastock180408399/100468063-young-woman-cartoon-with-casual-clothes-icon.jpg", 
+  "https://image.shutterstock.com/image-vector/portrait-handsome-man-shirt-jeans-260nw-582282625.jpg", 
+  "https://graphicriver.img.customer.envatousercontent.com/files/270440720/CartoonDogPointer%20p.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=d7ccf47eef9f9a8f679c134cc70bffa5"
+];
+
+var names = [
+ "Fmaily Book",
+ "Devika",
+ "Nikhil",
+ "lakshmi",
+ "Sree",
+ "Louie"
+];
+var i = 0;
+function update()
+{
+i++;
+var numbers_of_family_member_in_array = 5
+if(i > numbers_of_family_member_in_array )
+{
+i = 0;
+}
+var updatedImage = images[i];
+var updatedName  = names[i];
+document.getElementById("family_member_image").src = updatedImage;
+document.getElementById("family_member_name").innerHTML = updatedName;
+}
+
+        </script>
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 30%;" id="family_member_image">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+        </center>
+    </body>
+</html>
